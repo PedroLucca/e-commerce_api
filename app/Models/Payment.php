@@ -12,10 +12,13 @@ class Payment extends Model
     protected $table = 'payment';
 
     protected $fillable = [
-        'name',
-        'description',
+        'user_id',
         'price',
-        'stock'
+        'payment_date',
+        'status'
     ];
 
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

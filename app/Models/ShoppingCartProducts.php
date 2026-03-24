@@ -15,7 +15,8 @@ class ShoppingCartProducts extends Model {
         'user_id',
         'product_id',
         'amount',
-        'status'
+        'status',
+        'price_bought_product'
     ];
 
     public function user(){
